@@ -13,7 +13,7 @@ recurse() {
 	# dont follow symbolic links
 	if [ -L "$path" ] ; then continue ; fi
 	# recurse down dirs
-        if [ -d "$path" ] ; then recurse $path ; fi
+        if [ -d "$path" ] ; then recurse "$path" ; fi
     done
 }    
 
